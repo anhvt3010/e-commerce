@@ -31,6 +31,12 @@ public class UserProfileService {
         return userProfileMapper.toUserProfileResponse(userProfile);
     }
 
+    public UserProfileResponse getProfileByUserId(String id){
+        UserProfile userProfile = userProfileRepository.findByUserId(id)
+                .orElseThrow(() -> new RuntimeException("Profile not found"));
+        return userProfileMapper.toUserProfileResponse(userProfile);
+    }
+
     public void deleteById(String id){
         UserProfile userProfile = userProfileRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Profile not found"));

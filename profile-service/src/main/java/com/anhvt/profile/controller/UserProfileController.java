@@ -20,9 +20,14 @@ public class UserProfileController {
         return userProfileService.createProfile(request);
     }
 
-    @GetMapping("/{profileId}")
+    @GetMapping("/by-id/{profileId}")
     UserProfileResponse getProfile(@PathVariable String profileId){
         return userProfileService.getProfile(profileId);
+    }
+
+    @GetMapping("/by-userid/{userId}")
+    UserProfileResponse getProfileByUserId(@PathVariable String userId){
+        return userProfileService.getProfileByUserId(userId);
     }
     @DeleteMapping("/{profileId}")
     void deleteProfile(@PathVariable String profileId){
