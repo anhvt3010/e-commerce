@@ -36,7 +36,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="api-gateway" target="17" />
       <module name="test-service" target="17" />
       <module name="untitled" target="17" />
     </bytecodeTargetLevel>
