@@ -9,7 +9,10 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -18,6 +21,12 @@ import org.springframework.stereotype.Service;
 public class UserProfileService {
     UserProfileRepository userProfileRepository;
     UserProfileMapper userProfileMapper;
+
+    @PreAuthorize("hasRole('ADMIN')")
+    public List<UserProfileResponse> getAllProfiles(){
+        var profiles = userProfileRepository.findAll();
+        return profiles.stream().map(userProfileMapper::toUserProfileResponse).toList();
+    }
 
     public UserProfileResponse createProfile(ProfileCreationRequest request){
         UserProfile userProfile = userProfileMapper.toUserProfile(request);

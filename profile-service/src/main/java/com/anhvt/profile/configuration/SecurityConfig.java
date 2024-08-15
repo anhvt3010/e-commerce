@@ -1,4 +1,4 @@
-package com.anhvt.identity.configuration;
+package com.anhvt.profile.configuration;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -21,12 +21,6 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
     private static final String[] PUBLIC_ENDPOINTS = {
-            "/users",
-            "/users/registration",
-            "/auth/token",
-            "/auth/introspect",
-            "/auth/logout",
-            "/auth/refresh",
 
     };
 
@@ -57,10 +51,5 @@ public class SecurityConfig {
         jwtAuthenticationConverter.setJwtGrantedAuthoritiesConverter(jwtGrantedAuthoritiesConverter);
 
         return jwtAuthenticationConverter;
-    }
-
-    @Bean
-    PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder(10);
     }
 }

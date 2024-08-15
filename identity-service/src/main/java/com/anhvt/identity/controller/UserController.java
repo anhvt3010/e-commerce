@@ -9,7 +9,7 @@ import jakarta.validation.Valid;
 
 import org.springframework.web.bind.annotation.*;
 
-import com.anhvt.identity.dto.request.ApiResponse;
+import com.anhvt.identity.dto.ApiResponse;
 import com.anhvt.identity.service.UserService;
 
 import lombok.AccessLevel;
@@ -25,7 +25,7 @@ import lombok.extern.slf4j.Slf4j;
 public class UserController {
     UserService userService;
 
-    @PostMapping
+    @PostMapping("/registration")
     ApiResponse<UserResponse> createUser(@RequestBody @Valid UserCreationRequest request) {
         return ApiResponse.<UserResponse>builder()
                 .result(userService.createUser(request))

@@ -6,7 +6,7 @@ import com.anhvt.identity.dto.request.RoleRequest;
 import com.anhvt.identity.dto.response.RoleResponse;
 import org.springframework.web.bind.annotation.*;
 
-import com.anhvt.identity.dto.request.ApiResponse;
+import com.anhvt.identity.dto.ApiResponse;
 import com.anhvt.identity.service.RoleService;
 
 import lombok.AccessLevel;

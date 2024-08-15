@@ -1,4 +1,4 @@
-package com.anhvt.identity.dto.request;
+package com.anhvt.identity.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 

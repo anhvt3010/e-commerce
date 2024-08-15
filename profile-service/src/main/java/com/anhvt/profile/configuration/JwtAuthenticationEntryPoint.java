@@ -1,17 +1,16 @@
-package com.anhvt.identity.configuration;
+package com.anhvt.profile.configuration;
 
-import java.io.IOException;
 
+import com.anhvt.profile.dto.ApiResponse;
+import com.anhvt.profile.exception.ErrorCode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
 import org.springframework.http.MediaType;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 
-import com.anhvt.identity.dto.ApiResponse;
-import com.anhvt.identity.exception.ErrorCode;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.IOException;
 
 public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint {
     @Override
