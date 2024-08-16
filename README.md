@@ -39,8 +39,3 @@ Xây dựng một ứng dụng thương mại điện tử với các microservi
 8. **CI/CD**: Thiết lập Jenkins để tự động hóa quá trình build và deploy.
 9. **Tìm kiếm**: Tích hợp Elasticsearch để tìm kiếm sản phẩm và người dùng.
 10. **Kiểm thử và triển khai**: Thực hiện kiểm thử và triển khai lên môi trường thực tế.
-
-## Lợi ích
-- **Kỹ năng thực tế**: Bạn sẽ có cơ hội áp dụng các công nghệ và công cụ hiện đại vào thực tế.
-- **CV ấn tượng**: Dự án này sẽ làm nổi bật CV của bạn, cho thấy bạn có kinh nghiệm với các công nghệ phổ biến trong ngành.
-- **Kiến thức sâu rộng**: Bạn sẽ hiểu rõ hơn về cách các hệ thống phức tạp hoạt động và cách tối ưu hóa chúng.
